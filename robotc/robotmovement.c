@@ -1,6 +1,13 @@
-task main(){
-  //Do something here! :) 
-  motor[port2]=127;
-  motor[port3]=127;
-  wait1Msec(3000);
+task main{
+  //All the robot code
+  setMotor(leftMotor,60);
+  setMotor(rightMotor,60);
+  wait(3,seconds);
+  setMotor(leftMotor,-60);
+  setMotor(rightMotor,-60);
+  wait(3,seconds);
+  //Make the robot turn
+  setMotor(rightMotor,127);
+  setMotor(leftMotor,0);
+  wait(1,seconds);
 }
